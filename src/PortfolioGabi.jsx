@@ -14,7 +14,7 @@ const projectsData = [
 
         title: 'Sistema de Gestão Imobiliária',
 
-        image: './src/Img/Nereus.png',
+        image: '/Portfolio-Gabi/Img/Nereus.png',
 
         description: 'Plataforma web desenvolvida para otimizar o controle de imóveis e residenciais, substituindo processos manuais por uma solução digital intuitiva e eficiente. Interface moderna em dark mode, responsiva e com foco na experiência do usuário.',
 
@@ -36,7 +36,7 @@ const projectsData = [
 
         title: 'Sistema de Gestão OS',
 
-        image: './src/Img/YggOS.png',
+        image: '/Portfolio-Gabi/Img/YggOS.png',
 
         description: 'Sistema focado em técnicos de manutenção de hardware para organizar e gerenciar ordens de serviço. Permite registrar atendimentos, clientes, equipamentos e status de conserto.',
 
@@ -58,7 +58,7 @@ const projectsData = [
 
         title: 'Site para Empreiteiro',
 
-        image: './src/Img/cm.jpeg',
+        image: '/Portfolio-Gabi/Img/cm,jpeg',
 
         description: 'Site institucional desenvolvido para um empreiteiro, com foco em apresentar serviços de construção civil, portfólio de obras e formas de contato.',
 
@@ -650,7 +650,7 @@ const PortfolioGabi = () => {
 
                             <img
 
-                                src="./src/Img/Perfil.jpg"
+                                src="/Portfolio-Gabi/Img/Perfil.jpg"
 
                                 alt="Gabi Ribeiro"
 

@@ -237,3 +237,16 @@
 .shadow-glow-green {
     box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
 }
+/* Fix para mobile */
+@media (max-width: 768px) {
+    .glass-card {
+        margin-bottom: 1rem;
+        min-height: auto;
+    }
+    
+    .project-card,
+    .blog-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}

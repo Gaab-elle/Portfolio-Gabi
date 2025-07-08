@@ -250,3 +250,48 @@
         max-width: 100%;
     }
 }
+
+/* Correções específicas para mobile */
+@media (max-width: 768px) {
+    /* Fix para grids mobile */
+    .grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Garantir que cards apareçam */
+    .glass-card {
+        width: 100% !important;
+        min-height: 200px !important;
+        margin-bottom: 1rem !important;
+        display: block !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    /* Fix para project cards */
+    .project-card {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Fix para animações no mobile */
+    .transition-all {
+        transition: none !important;
+    }
+    
+    /* Garantir visibilidade das seções */
+    #projects,
+    #blog,
+    #contact {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    /* Fix específico para o container do grid */
+    [class*="grid-cols"] {
+        grid-template-columns: 1fr !important;
+    }
+}

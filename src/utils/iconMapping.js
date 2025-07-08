@@ -1,0 +1,43 @@
+import {
+    Atom, Code, FileCode, Palette, Wind, Server, Database, Shield, Bug, Network, 
+    Terminal, Laptop, Cloud, Lock, GitFork, Box, Send, Figma, Dot, Circle, 
+    Type, Search, Github 
+} from 'lucide-react';
+
+export const LucideIconMap = {
+    'react': Atom,
+    'javascript': Code,
+    'typescript': Type,
+    'html5': FileCode,
+    'css3': Palette,
+    'tailwind': Wind,
+    'nodejs': Server,
+    'python': Terminal,
+    'express': Server,
+    'django': Code,
+    'postgresql': Database,
+    'mongodb': Database,
+    'owasp': Shield,
+    'pentesting': Bug,
+    'networksecurity': Network,
+    'linuxhardening': Terminal,
+    'awssecurity': Cloud,
+    'cryptography': Lock,
+    'git': GitFork,
+    'docker': Box,
+    'aws': Cloud,
+    'figma': Figma,
+    'vscode': Code,
+    'postman': Send,
+    'github': Github, // ← Agora pode usar o Github aqui
+    'visualstudio': Code,
+    'csharp': Code,
+    'dotnet': Dot,
+    'sqlserver': Database,
+    'responsive': Laptop,
+    'seo': Search,
+    'firebase': Cloud,
+    'zustand': Circle,
+    'vuejs': Atom,
+    'defaultgeneric': Circle,
+};

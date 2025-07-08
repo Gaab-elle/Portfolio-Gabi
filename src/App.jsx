@@ -1,12 +1,8 @@
-// src/App.jsx
 import React from 'react';
-import PortfolioGabi from './PortfolioGabi'; // Importa o componente do portfólio
+import PortfolioGabi from './PortfolioGabi';
 
 function App() {
-    return (
-        <PortfolioGabi />
-    );
+  return <PortfolioGabi />;
 }
 
 export default App;
-

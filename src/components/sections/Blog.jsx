@@ -21,7 +21,7 @@ const Blog = ({ visibleSections, sectionRef, openBlogModal }) => {
                     Blog
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     {blogPosts.map((post, index) => (
                         <article
                             key={post.id}

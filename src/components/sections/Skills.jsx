@@ -28,7 +28,10 @@ const Skills = ({ visibleSections, sectionRef }) => {
                                     ? 'opacity-100 translate-y-0'
                                     : 'opacity-0 translate-y-10'
                             }`}
-                            style={{ transitionDelay: `${categoryIndex * 200}ms` }}
+                            style={{ 
+    transitionDelay: `${categoryIndex * 200}ms`,
+    minHeight: 'auto'
+}}
                         >
                             <h3 className="text-xl font-semibold mb-4 text-center" style={{ color: '#8b45ff' }}>
                                 {category}

@@ -237,7 +237,7 @@ Em uma galáxia muito, muito distante... Na verdade, não! Bem aqui em Belém me
 
 ## 🔧 O Que é o Digispark?
 
-Imagine um pendrive que, ao invés de só guardar suas fotos de açaí, pode literalmente "conversar" com qualquer computador, se passando por teclado, mouse ou qualquer dispositivo USB. É como se fosse um R2-D2 disfarçado de pen drive comum!
+Imagine um pendrive que, ao invés de só guardar fotos da sua Ex e seus bregas marcantes, pode literalmente "conversar" com qualquer computador, se passando por teclado, mouse ou qualquer dispositivo USB. É como se fosse um R2-D2 disfarçado de pen drive comum!
 
 ### A "Gambiarra" Genial
 O Digispark é menor que seu polegar - você pode esconder um debaixo de uma moeda! Mas não se deixe enganar pelo tamanho. Este microcontrolador é como aquelas gambiarras geniais que só o brasileiro sabe fazer: parece simples, mas resolve problemas complexos.
@@ -285,8 +285,7 @@ Use conhecimentos para proteger, não atacar. Seja o Obi-Wan da sua empresa!
 
 ### Onde Encontrar Seu Digispark
 - **Online**: AliExpress, MercadoLivre, Amazon (R$ 15-30)
-- **Belém**: Lojas de eletrônica na João Balbi
-- **Outras Cidades**: Casas especializadas em Arduino
+- **Presencial**: Casas especializadas em Arduino
 
 ### Arsenal do Jedi Iniciante
 - Arduino IDE (software gratuito)
@@ -368,7 +367,7 @@ O Digispark é pequeno como um grão de açaí, mas poderoso como a correnteza d
 - 🌟 A Força é forte, mas a responsabilidade é mais forte
 - 🇧🇷 Somos brasileiros - criatividade para o bem!
 
-De Belém para a galáxia, de gambiarras paraenses para soluções globais de segurança, o caminho está aberto. A escolha é sua, jovem Padawan!
+De Belém para a galáxia, de gambiarras brasileiras para soluções globais de segurança, o caminho está aberto. A escolha é sua, jovem Padawan!
 
 **Que a Força (e a ética) estejam sempre com você!** ⚔️✨
 

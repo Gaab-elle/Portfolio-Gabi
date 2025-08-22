@@ -23,8 +23,9 @@ const About = ({ visibleSections, sectionRef }) => {
               : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
+          <div className="flex flex-col gap-8">
+            {/* Texto principal - agora ocupa toda a largura */}
+            <div className="w-full">
               <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Sou Desenvolvedora Full Stack e adoro transformar ideias em
                 soluções práticas e funcionais. Tenho um interesse especial em
@@ -41,17 +42,19 @@ const About = ({ visibleSections, sectionRef }) => {
                 ecossistema digital mais eficiente e inovador.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <div className="w-3 h-3 bg-green-500 rounded-full" />
+
+            {/* Highlights - agora em linha horizontal */}
+            <div className="flex justify-between gap-6 flex-wrap lg:flex-nowrap">
+              <div className="flex items-center space-x-3 text-gray-300 flex-1 min-w-[250px]">
+                <div className="w-3 h-3 bg-green-500 rounded-full flex-shrink-0" />
                 <span>Desenvolvimento Full Stack</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <div className="w-3 h-3 bg-purple-500 rounded-full" />
+              <div className="flex items-center space-x-3 text-gray-300 flex-1 min-w-[250px]">
+                <div className="w-3 h-3 bg-purple-500 rounded-full flex-shrink-0" />
                 <span>Especialista em Automação | Low/No Code</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <div className="w-3 h-3 bg-pink-500 rounded-full" />
+              <div className="flex items-center space-x-3 text-gray-300 flex-1 min-w-[200px]">
+                <div className="w-3 h-3 bg-pink-500 rounded-full flex-shrink-0" />
                 <span>Aprendizado contínuo</span>
               </div>
             </div>

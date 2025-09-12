@@ -199,7 +199,7 @@ const PortfolioGabi = () => {
       >
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-400">
-            © 2025 Gaabzy. Desenvolvido com 💜 e ☕
+            © 2025 Gaabzy. Developed by Gabrielle Ribeiro
           </p>
         </div>
       </footer>

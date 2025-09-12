@@ -1,8 +1,8 @@
 import React from 'react';
-import PortfolioGabi from './PortfolioGabi';
+import PortfolioWindows7 from './PortfolioWindows7';
 
 function App() {
-  return <PortfolioGabi />;
+  return <PortfolioWindows7 />;
 }
 
 export default App;

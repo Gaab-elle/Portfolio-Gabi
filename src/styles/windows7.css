@@ -12,6 +12,13 @@ body {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   overflow: hidden;
   height: 100vh;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Desktop Background */
@@ -368,9 +375,172 @@ body {
     width: 100vw !important;
     height: 100vh !important;
     border-radius: 0;
+    min-width: 100vw !important;
+    min-height: 100vh !important;
   }
   
   .taskbar {
     display: none;
+  }
+
+  /* Desktop icons mobile */
+  .desktop-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px;
+  }
+
+  .desktop-icon {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 10px 0;
+  }
+
+  .desktop-icon div:first-child {
+    font-size: 40px !important;
+  }
+
+  .desktop-icon div:last-child {
+    font-size: 12px !important;
+  }
+
+  /* Start menu mobile */
+  .start-menu {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    height: 60vh !important;
+    border-radius: 20px 20px 0 0 !important;
+  }
+
+  /* Window content mobile */
+  .window-content {
+    padding: 16px !important;
+    font-size: 16px !important;
+  }
+
+  .portfolio-content h1 {
+    font-size: 20px !important;
+  }
+
+  .portfolio-content h2 {
+    font-size: 18px !important;
+  }
+
+  .portfolio-content p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Window titlebar mobile */
+  .window-titlebar {
+    height: 40px !important;
+    font-size: 14px !important;
+  }
+
+  .window-button {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* Touch-friendly buttons */
+  .start-menu-item {
+    padding: 16px 20px !important;
+    font-size: 16px !important;
+    min-height: 60px !important;
+  }
+
+  .start-menu-item div:first-child {
+    font-size: 18px !important;
+  }
+
+  .start-menu-item div:last-child {
+    font-size: 13px !important;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  .desktop-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .desktop-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .start-menu {
+    height: 80vh !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .desktop-icon {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .desktop-icon div:first-child {
+    font-size: 35px !important;
+  }
+
+  .desktop-icon div:last-child {
+    font-size: 11px !important;
+  }
+
+  .start-menu {
+    height: 70vh !important;
+  }
+
+  .window-content {
+    padding: 12px !important;
+  }
+
+  .portfolio-content h1 {
+    font-size: 18px !important;
+  }
+
+  .portfolio-content h2 {
+    font-size: 16px !important;
+  }
+
+  .portfolio-content p {
+    font-size: 13px !important;
+  }
+}
+
+/* iOS specific adjustments */
+@supports (-webkit-touch-callout: none) {
+  .desktop-icon {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+  }
+
+  .window-frame {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .window-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Android specific adjustments */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .desktop-icon {
+    touch-action: manipulation;
   }
 }

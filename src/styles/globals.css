@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+/* Configuração global da fonte Fira Code */
+* {
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+body {
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
 
 /* Animações */
 @keyframes fall {
@@ -294,4 +304,79 @@
     [class*="grid-cols"] {
         grid-template-columns: 1fr !important;
     }
+}
+
+/* Layout Masonry (Pinterest-style) */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+    break-inside: avoid;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Responsive masonry */
+@media (min-width: 768px) {
+    .masonry-grid {
+        column-count: 2;
+        column-gap: 2rem;
+    }
+    
+    .masonry-item {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+        column-gap: 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .masonry-grid {
+        column-count: 4;
+        column-gap: 2rem;
+    }
+}
+
+/* Alturas customizadas para o efeito masonry */
+.h-72 {
+    height: 18rem;
+}
+
+.h-80 {
+    height: 20rem;
+}
+
+.h-84 {
+    height: 21rem;
+}
+
+.h-88 {
+    height: 22rem;
+}
+
+.h-96 {
+    height: 24rem;
+}
+
+/* Melhorar a aparência dos cards no masonry */
+.masonry-item .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.masonry-item .project-card > div:last-child {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

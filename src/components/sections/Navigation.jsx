@@ -25,7 +25,7 @@ const Navigation = ({
                     </div>
 
                     <div className="hidden md:flex space-x-8">
-                        {['home', 'about', 'skills', 'projects', 'blog', 'contact'].map((section) => (
+                        {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
                             <button
                                 key={section}
                                 onClick={() => scrollToSection(section)}
@@ -54,7 +54,7 @@ const Navigation = ({
                 {isMenuOpen && (
                     <div className="md:hidden bg-gray-800/95 backdrop-blur-lg border-t border-purple-500/20 rounded-b-lg">
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            {['home', 'about', 'skills', 'projects', 'blog', 'contact'].map((section) => (
+                            {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
                                 <button
                                     key={section}
                                     onClick={() => scrollToSection(section)}

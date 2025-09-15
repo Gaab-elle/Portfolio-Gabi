@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import WindowManager from "./components/common/WindowManager";
 import DesktopIcons from "./components/common/DesktopIcons";
+import MobileHelper from "./components/common/MobileHelper";
 // import DynamicLucideIcon from "./components/common/DynamicLucideIcon";
 // import { techIcons } from "./data/techIcons";
 
@@ -185,6 +186,9 @@ const PortfolioWindows7 = () => {
       openModal={openModal}
       openBlogModal={openBlogModal}
     >
+      {/* Helper para mobile */}
+      <MobileHelper />
+
       {/* Ícones do Desktop */}
       <DesktopIcons 
         onOpenWindow={openPortfolioWindow} 

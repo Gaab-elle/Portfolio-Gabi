@@ -99,10 +99,34 @@ src/
 
 ## 🌟 Destaques
 
-- **100% responsivo** - Funciona em desktop e mobile
-- **Performance otimizada** - Carregamento rápido
-- **Acessibilidade** - Suporte a navegação por teclado
+- **100% responsivo** - Funciona perfeitamente em desktop, tablet e mobile
+- **Suporte completo para touch** - Otimizado para Android e iOS
+- **Performance otimizada** - Carregamento rápido em todos os dispositivos
+- **Acessibilidade** - Suporte a navegação por teclado e touch
 - **Cross-browser** - Compatível com todos os navegadores modernos
+- **Mobile-first** - Interface adaptada para dispositivos móveis
+
+## 📱 Recursos Mobile
+
+### 🎯 **Otimizações para Mobile:**
+- **Layout adaptativo** - Ícones reorganizados em coluna no mobile
+- **Touch-friendly** - Botões e elementos otimizados para toque
+- **Janelas em tela cheia** - Ocupam toda a tela em dispositivos móveis
+- **Menu iniciar mobile** - Aparece como modal na parte inferior
+- **Drag and drop touch** - Suporte completo para arrastar com dedos
+- **Helper mobile** - Tutorial inicial para usuários mobile
+
+### 📐 **Breakpoints:**
+- **Desktop:** > 768px - Layout completo Windows 7
+- **Tablet:** 768px - Layout híbrido
+- **Mobile:** < 768px - Layout otimizado para touch
+- **Small Mobile:** < 480px - Layout compacto
+
+### 🎮 **Interações Mobile:**
+- **Toque simples** - Abre seções
+- **Arrastar** - Move ícones e janelas
+- **Pinch/zoom** - Suporte nativo do navegador
+- **Orientação** - Adapta-se a portrait e landscape
 
 ## 📄 Licença
 

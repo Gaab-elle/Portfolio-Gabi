@@ -9,12 +9,10 @@ import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
-import Blog from "./components/sections/Blog";
 import Contact from "./components/sections/Contact";
 
 // Importar modais
 import ProjectModal from "./components/modals/ProjectModal";
-import BlogModal from "./components/modals/BlogModal";
 
 // Importar estilos
 import "./styles/globals.css";
@@ -25,8 +23,6 @@ const PortfolioGabi = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedPost, setSelectedPost] = useState(null);
-  const [isBlogModalOpen, setIsBlogModalOpen] = useState(false);
   const [visibleSections, setVisibleSections] = useState(new Set());
   const [fallingIcons, setFallingIcons] = useState([]);
 
@@ -83,18 +79,6 @@ const PortfolioGabi = () => {
     document.body.style.overflow = "";
   }, []);
 
-  // Handlers para modais do blog
-  const openBlogModal = useCallback((post) => {
-    setSelectedPost(post);
-    setIsBlogModalOpen(true);
-    document.body.style.overflow = "hidden";
-  }, []);
-
-  const closeBlogModal = useCallback(() => {
-    setIsBlogModalOpen(false);
-    setSelectedPost(null);
-    document.body.style.overflow = "";
-  }, []);
 
   // Função para scroll suave entre seções
   const scrollToSection = useCallback(
@@ -110,7 +94,7 @@ const PortfolioGabi = () => {
 
   return (
     <div
-      className="min-h-screen text-white font-sans"
+      className="min-h-screen text-white"
       style={{
         background:
           "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%)",
@@ -179,12 +163,6 @@ const PortfolioGabi = () => {
         openModal={openModal}
       />
 
-      {/* Seção Blog */}
-      <Blog
-        visibleSections={visibleSections}
-        sectionRef={(el) => (sectionRefs.current.blog = el)}
-        openBlogModal={openBlogModal}
-      />
 
       {/* Seção Contact */}
       <Contact
@@ -209,12 +187,6 @@ const PortfolioGabi = () => {
         isOpen={isModalOpen}
         project={selectedProject}
         onClose={closeModal}
-      />
-
-      <BlogModal
-        isOpen={isBlogModalOpen}
-        post={selectedPost}
-        onClose={closeBlogModal}
       />
     </div>
   );

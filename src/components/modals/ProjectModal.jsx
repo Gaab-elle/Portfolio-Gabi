@@ -31,18 +31,76 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
                 <div className="p-8">
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-4 gap-4">
                         <h3 className="text-3xl font-bold text-white">{project.title}</h3>
-                        <span className={`px-3 py-1 text-sm rounded-full border ${
-                            project.status === 'Concluído'
-                                ? 'text-green-400 bg-green-500/20 border-green-500/30'
-                                : 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30'
-                        }`}>
-                            {project.status}
-                        </span>
+                        <div className="flex gap-2">
+                            <span className={`px-3 py-1 text-sm rounded-full border ${
+                                project.status === 'Concluído'
+                                    ? 'text-green-400 bg-green-500/20 border-green-500/30'
+                                    : 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30'
+                            }`}>
+                                {project.status}
+                            </span>
+                            <span className="px-3 py-1 text-sm rounded-full border text-blue-400 bg-blue-500/20 border-blue-500/30">
+                                {project.category}
+                            </span>
+                        </div>
                     </div>
 
                     <p className="text-gray-300 text-lg leading-relaxed mb-6">
                         {project.description}
                     </p>
+
+                    {/* Descrição detalhada */}
+                    {project.longDescription && (
+                        <div className="mb-6">
+                            <h4 className="text-xl font-semibold mb-3" style={{ color: '#8b45ff' }}>
+                                Sobre o Projeto
+                            </h4>
+                            <div className="text-gray-300 leading-relaxed whitespace-pre-line">
+                                {project.longDescription}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Funcionalidades */}
+                    {project.features && (
+                        <div className="mb-6">
+                            <h4 className="text-xl font-semibold mb-3" style={{ color: '#8b45ff' }}>
+                                Principais Funcionalidades
+                            </h4>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                {project.features.map((feature, index) => (
+                                    <div key={index} className="flex items-center gap-2 text-gray-300">
+                                        <span className="text-green-400">✓</span>
+                                        <span>{feature}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Desafios e Resultados */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        {project.challenges && (
+                            <div>
+                                <h4 className="text-lg font-semibold mb-2" style={{ color: '#8b45ff' }}>
+                                    Desafios
+                                </h4>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    {project.challenges}
+                                </p>
+                            </div>
+                        )}
+                        {project.results && (
+                            <div>
+                                <h4 className="text-lg font-semibold mb-2" style={{ color: '#8b45ff' }}>
+                                    Resultados
+                                </h4>
+                                <p className="text-gray-300 text-sm leading-relaxed">
+                                    {project.results}
+                                </p>
+                            </div>
+                        )}
+                    </div>
 
                     <div className="mb-6">
                         <h4 className="text-xl font-semibold mb-3" style={{ color: '#8b45ff' }}>

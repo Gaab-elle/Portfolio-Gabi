@@ -24,23 +24,32 @@ const WindowFrame = ({
     if (e.target.closest('.window-buttons')) return;
     
     setIsDragging(true);
+    
+    // Suporte para touch events
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+    
     setDragStart({
-      x: e.clientX - position.x,
-      y: e.clientY - position.y
+      x: clientX - position.x,
+      y: clientY - position.y
     });
   };
 
   const handleMouseMove = (e) => {
+    // Suporte para touch events
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+    
     if (isDragging) {
       setPosition({
-        x: e.clientX - dragStart.x,
-        y: e.clientY - dragStart.y
+        x: clientX - dragStart.x,
+        y: clientY - dragStart.y
       });
     }
     
     if (isResizing) {
-      const newWidth = Math.max(300, resizeStart.width + (e.clientX - resizeStart.x));
-      const newHeight = Math.max(200, resizeStart.height + (e.clientY - resizeStart.y));
+      const newWidth = Math.max(300, resizeStart.width + (clientX - resizeStart.x));
+      const newHeight = Math.max(200, resizeStart.height + (clientY - resizeStart.y));
       setSize({ width: newWidth, height: newHeight });
     }
   };
@@ -65,9 +74,13 @@ const WindowFrame = ({
     if (isDragging || isResizing) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleMouseMove, { passive: false });
+      document.addEventListener('touchend', handleMouseUp);
       return () => {
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
+        document.removeEventListener('touchmove', handleMouseMove);
+        document.removeEventListener('touchend', handleMouseUp);
       };
     }
   }, [isDragging, isResizing, dragStart, resizeStart]);
@@ -92,6 +105,7 @@ const WindowFrame = ({
       <div 
         className="window-titlebar"
         onMouseDown={handleMouseDown}
+        onTouchStart={handleMouseDown}
       >
         <div className="window-title">
           <span className="window-icon">📁</span>

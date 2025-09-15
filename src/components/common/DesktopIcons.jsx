@@ -45,17 +45,26 @@ const DesktopIcons = ({ onOpenWindow, openModal, openBlogModal }) => {
   const handleMouseDown = (e, item) => {
     e.preventDefault();
     setDraggedIcon(item);
+    
+    // Suporte para touch events
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+    
     setDragOffset({
-      x: e.clientX - item.position.x,
-      y: e.clientY - item.position.y
+      x: clientX - item.position.x,
+      y: clientY - item.position.y
     });
   };
 
   const handleMouseMove = (e) => {
     if (draggedIcon) {
+      // Suporte para touch events
+      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+      const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+      
       const newPosition = {
-        x: e.clientX - dragOffset.x,
-        y: e.clientY - dragOffset.y
+        x: clientX - dragOffset.x,
+        y: clientY - dragOffset.y
       };
 
       // Limitar o movimento dentro da tela
@@ -81,9 +90,13 @@ const DesktopIcons = ({ onOpenWindow, openModal, openBlogModal }) => {
     if (draggedIcon) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleMouseMove, { passive: false });
+      document.addEventListener('touchend', handleMouseUp);
       return () => {
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
+        document.removeEventListener('touchmove', handleMouseMove);
+        document.removeEventListener('touchend', handleMouseUp);
       };
     }
   }, [draggedIcon, dragOffset]);
@@ -140,6 +153,7 @@ const DesktopIcons = ({ onOpenWindow, openModal, openBlogModal }) => {
             zIndex: draggedIcon?.id === item.id ? 1000 : 1
           }}
           onMouseDown={(e) => handleMouseDown(e, item)}
+          onTouchStart={(e) => handleMouseDown(e, item)}
           onDoubleClick={() => handleIconDoubleClick(item)}
           onMouseEnter={(e) => {
             if (draggedIcon?.id !== item.id) {

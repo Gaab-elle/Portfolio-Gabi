@@ -7,8 +7,9 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
     if (!isOpen || !project) return null;
     
     const { t, lang } = useI18n();
-    const i18n = (projectTranslations[lang] && projectTranslations[lang].items[project.id]) || {};
-    const statusMap = (projectTranslations[lang] && projectTranslations[lang].status) || {};
+    const langKey = (typeof lang === 'string' ? lang.toLowerCase() : lang) || 'pt';
+    const i18n = (projectTranslations[langKey] && projectTranslations[langKey].items[project.id]) || {};
+    const statusMap = (projectTranslations[langKey] && projectTranslations[langKey].status) || {};
     const statusLabel = statusMap[project.status] || project.status;
     const title = i18n.title || project.title;
     const description = i18n.description || project.description;

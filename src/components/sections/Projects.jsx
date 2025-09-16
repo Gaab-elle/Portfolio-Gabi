@@ -6,6 +6,7 @@ import { useI18n } from '../../i18n/i18n.jsx';
 
 const Projects = ({ visibleSections, sectionRef, openModal }) => {
     const { t, lang } = useI18n();
+    const langKey = (typeof lang === 'string' ? lang.toLowerCase() : lang) || 'pt';
     return (
         <section
             id="projects"
@@ -24,8 +25,8 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
 
                 <div className="projects-grid">
                     {projectsData.map((project, index) => {
-                        const i18n = (projectTranslations[lang] && projectTranslations[lang].items[project.id]) || {};
-                        const statusMap = (projectTranslations[lang] && projectTranslations[lang].status) || {};
+                        const i18n = (projectTranslations[langKey] && projectTranslations[langKey].items[project.id]) || {};
+                        const statusMap = (projectTranslations[langKey] && projectTranslations[langKey].status) || {};
                         const statusLabel = statusMap[project.status] || project.status;
                         const title = i18n.title || project.title;
                         const description = i18n.description || project.description;

@@ -12,6 +12,10 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
     const statusLabel = statusMap[project.status] || project.status;
     const title = i18n.title || project.title;
     const description = i18n.description || project.description;
+    const longDescription = i18n.longDescription || project.longDescription;
+    const features = i18n.features || project.features;
+    const challenges = i18n.challenges || project.challenges;
+    const results = i18n.results || project.results;
 
     return (
         <div
@@ -59,25 +63,25 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
                     </p>
 
                     {/* Descrição detalhada */}
-                    {project.longDescription && (
+                    {longDescription && (
                         <div className="mb-6">
                             <h4 className="text-xl font-semibold mb-3" style={{ color: '#8b45ff' }}>
                                 {t('modal.aboutProject')}
                             </h4>
                             <div className="text-gray-300 leading-relaxed whitespace-pre-line">
-                                {project.longDescription}
+                                {longDescription}
                             </div>
                         </div>
                     )}
 
                     {/* Funcionalidades */}
-                    {project.features && (
+                    {features && (
                         <div className="mb-6">
                             <h4 className="text-xl font-semibold mb-3" style={{ color: '#8b45ff' }}>
                                 {t('modal.mainFeatures')}
                             </h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                {project.features.map((feature, index) => (
+                                {features.map((feature, index) => (
                                     <div key={index} className="flex items-center gap-2 text-gray-300">
                                         <span className="text-green-400">✓</span>
                                         <span>{feature}</span>
@@ -89,23 +93,23 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
 
                     {/* Desafios e Resultados */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        {project.challenges && (
+                        {challenges && (
                             <div>
                                 <h4 className="text-lg font-semibold mb-2" style={{ color: '#8b45ff' }}>
                                     {t('modal.challenges')}
                                 </h4>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    {project.challenges}
+                                    {challenges}
                                 </p>
                             </div>
                         )}
-                        {project.results && (
+                        {results && (
                             <div>
                                 <h4 className="text-lg font-semibold mb-2" style={{ color: '#8b45ff' }}>
                                     {t('modal.results')}
                                 </h4>
                                 <p className="text-gray-300 text-sm leading-relaxed">
-                                    {project.results}
+                                    {results}
                                 </p>
                             </div>
                         )}

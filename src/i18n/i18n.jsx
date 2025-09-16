@@ -17,7 +17,7 @@ const translations = {
     sections: {
       aboutTitle: "Sobre Mim",
       skillsTitle: "Habilidades",
-      projects: "Projetos",
+      projectsTitle: "Projetos",
       contactTitle: "Vamos Conversar?",
       contactSubtitle:
         "Estou sempre aberta a novas oportunidades e projetos interessantes. Entre em contato comigo!",
@@ -71,7 +71,7 @@ const translations = {
     sections: {
       aboutTitle: "About Me",
       skillsTitle: "Skills",
-      projects: "Projects",
+      projectsTitle: "Projects",
       contactTitle: "Let's Talk?",
       contactSubtitle:
         "I'm always open to new opportunities and interesting projects. Get in touch!",
@@ -125,7 +125,7 @@ const translations = {
     sections: {
       aboutTitle: "Sobre mí",
       skillsTitle: "Habilidades",
-      projects: "Proyectos",
+      projectsTitle: "Proyectos",
       contactTitle: "¿Hablamos?",
       contactSubtitle:
         "Siempre estoy abierta a nuevas oportunidades y proyectos interesantes. ¡Contáctame!",

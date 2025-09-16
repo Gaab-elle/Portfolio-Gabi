@@ -17,10 +17,6 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                 <h2 className="section-title">
                     {t('sections.projectsTitle')}
                 </h2>
-                {/* Debug info */}
-                <div style={{color: 'white', fontSize: '12px', marginBottom: '10px'}}>
-                    DEBUG: visibleSections.has("projects") = {visibleSections.has("projects") ? 'true' : 'false'}
-                </div>
 
                 <div className="projects-grid">
                     {projectsData.map((project, index) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { projectsData } from '../../data/projects';
-import { useI18n } from '../../i18n/i18n';
+import { useI18n } from '../../i18n/i18n.jsx';
 
 const Projects = ({ visibleSections, sectionRef, openModal }) => {
     const { t } = useI18n();

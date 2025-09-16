@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useI18n } from "./i18n/i18n";
+import { useI18n } from "./i18n/i18n.jsx";
 import { useIntersectionObserver } from "./hooks/useIntersectionObserver";
 
 // Importar componentes das seções

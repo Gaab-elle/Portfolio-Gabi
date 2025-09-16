@@ -1,6 +1,6 @@
 import React from 'react';
 import PortfolioGabiModern from './PortfolioGabiModern';
-import { I18nProvider } from './i18n/i18n';
+import { I18nProvider } from './i18n/i18n.jsx';
 
 function App() {
   return (

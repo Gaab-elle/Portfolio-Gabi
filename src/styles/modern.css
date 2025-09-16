@@ -118,6 +118,20 @@
   color: var(--primary);
 }
 
+.nav-container select {
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 8px;
+  padding: 6px 10px;
+  appearance: none;
+}
+
+.nav-container select option {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
 .nav-links a::after {
   content: '';
   position: absolute;

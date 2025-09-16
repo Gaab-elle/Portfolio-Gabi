@@ -1,11 +1,13 @@
 import React from 'react';
+import { useI18n } from '../../i18n/i18n.jsx';
 
 const Stats = () => {
+  const { t } = useI18n();
   const stats = [
-    { number: "6+", label: "Projetos Completados" },
-    { number: "3+", label: "Anos de Experiência" },
-    { number: "20+", label: "Tecnologias" },
-    { number: "100%", label: "Satisfação do Cliente" }
+    { number: "6+", label: t('stats.completed') },
+    { number: "3+", label: t('stats.years') },
+    { number: "20+", label: t('stats.techs') },
+    { number: "100%", label: t('stats.satisfaction') }
   ];
 
   return (

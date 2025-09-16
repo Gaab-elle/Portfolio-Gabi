@@ -22,6 +22,12 @@ const translations = {
       contactSubtitle:
         "Estou sempre aberta a novas oportunidades e projetos interessantes. Entre em contato comigo!",
     },
+    stats: {
+      completed: "Projetos Completados",
+      years: "Anos de Experiência",
+      techs: "Tecnologias",
+      satisfaction: "Satisfação do Cliente",
+    },
     contact: {
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -53,6 +59,12 @@ const translations = {
       contactSubtitle:
         "I'm always open to new opportunities and interesting projects. Get in touch!",
     },
+    stats: {
+      completed: "Projects Completed",
+      years: "Years of Experience",
+      techs: "Technologies",
+      satisfaction: "Client Satisfaction",
+    },
     contact: {
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -83,6 +95,12 @@ const translations = {
       contactTitle: "¿Hablamos?",
       contactSubtitle:
         "Siempre estoy abierta a nuevas oportunidades y proyectos interesantes. ¡Contáctame!",
+    },
+    stats: {
+      completed: "Proyectos Completados",
+      years: "Años de Experiencia",
+      techs: "Tecnologías",
+      satisfaction: "Satisfacción del Cliente",
     },
     contact: {
       linkedin: "LinkedIn",

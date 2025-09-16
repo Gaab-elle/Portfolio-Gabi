@@ -22,6 +22,13 @@ const translations = {
       contactSubtitle:
         "Estou sempre aberta a novas oportunidades e projetos interessantes. Entre em contato comigo!",
     },
+    about: {
+      p1:
+        "Sou Desenvolvedora Full Stack e adoro transformar ideias em soluções práticas e funcionais. Tenho um interesse especial em automações, porque acredito que a tecnologia deve simplificar a vida das pessoas e tornar processos mais leves.",
+      p2:
+        "Combino criatividade com código limpo para desenvolver aplicações web modernas. Meu objetivo é criar soluções que automatizem processos, tragam praticidade e contribuam para um ecossistema digital mais eficiente e inovador.",
+      specialtiesTitle: "Minhas Especialidades",
+    },
     stats: {
       completed: "Projetos Completados",
       years: "Anos de Experiência",
@@ -59,6 +66,13 @@ const translations = {
       contactSubtitle:
         "I'm always open to new opportunities and interesting projects. Get in touch!",
     },
+    about: {
+      p1:
+        "I'm a Full Stack Developer who loves turning ideas into practical, functional solutions. I'm especially interested in automation because I believe technology should simplify people's lives and make processes lighter.",
+      p2:
+        "I combine creativity with clean code to build modern web applications. My goal is to create solutions that automate processes, bring practicality, and contribute to a more efficient and innovative digital ecosystem.",
+      specialtiesTitle: "My Specialties",
+    },
     stats: {
       completed: "Projects Completed",
       years: "Years of Experience",
@@ -95,6 +109,13 @@ const translations = {
       contactTitle: "¿Hablamos?",
       contactSubtitle:
         "Siempre estoy abierta a nuevas oportunidades y proyectos interesantes. ¡Contáctame!",
+    },
+    about: {
+      p1:
+        "Soy Desarrolladora Full Stack y me encanta transformar ideas en soluciones prácticas y funcionales. Tengo un interés especial en automatización, porque creo que la tecnología debe simplificar la vida de las personas y hacer los procesos más livianos.",
+      p2:
+        "Combino creatividad con código limpio para desarrollar aplicaciones web modernas. Mi objetivo es crear soluciones que automaticen procesos, aporten practicidad y contribuyan a un ecosistema digital más eficiente e innovador.",
+      specialtiesTitle: "Mis Especialidades",
     },
     stats: {
       completed: "Proyectos Completados",

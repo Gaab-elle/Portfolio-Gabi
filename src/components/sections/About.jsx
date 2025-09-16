@@ -9,21 +9,11 @@ const About = ({ visibleSections, sectionRef }) => {
         <h2 className="section-title">{t('sections.aboutTitle')}</h2>
         <div className="about-content">
           <div className="about-text">
-            <p>
-              Sou Desenvolvedora Full Stack e adoro transformar ideias em
-              soluções práticas e funcionais. Tenho um interesse especial em
-              automações, porque acredito que a tecnologia deve simplificar a
-              vida das pessoas e tornar processos mais leves.
-            </p>
+            <p>{t('about.p1')}</p>
             
-            <p>
-              Combino criatividade com código limpo para desenvolver
-              aplicações web modernas. Meu objetivo é criar soluções que
-              automatizem processos, tragam praticidade e contribuam para um
-              ecossistema digital mais eficiente e inovador.
-            </p>
+            <p>{t('about.p2')}</p>
 
-            <h3 className="specialties-title">Minhas Especialidades</h3>
+            <h3 className="specialties-title">{t('about.specialtiesTitle')}</h3>
             <div className="highlights">
               <span className="highlight-badge">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="tech-icon" />

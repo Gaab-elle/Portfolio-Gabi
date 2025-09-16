@@ -88,11 +88,11 @@ const PortfolioGabiModern = () => {
         <div className="nav-container">
           <div className="logo">Gabi Ribeiro</div>
           <ul className={`nav-links ${isMenuOpen ? 'nav-open' : ''}`}>
-            <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }} className={activeSection === 'home' ? 'active' : ''}>{t('nav.home')}</a></li>
-            <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} className={activeSection === 'about' ? 'active' : ''}>{t('nav.about')}</a></li>
-            <li><a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }} className={activeSection === 'skills' ? 'active' : ''}>{t('nav.skills')}</a></li>
-            <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }} className={activeSection === 'projects' ? 'active' : ''}>{t('nav.projects')}</a></li>
-            <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} className={activeSection === 'contact' ? 'active' : ''}>{t('nav.contact')}</a></li>
+            <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); setIsMenuOpen(false); }} className={activeSection === 'home' ? 'active' : ''}>{t('nav.home')}</a></li>
+            <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); setIsMenuOpen(false); }} className={activeSection === 'about' ? 'active' : ''}>{t('nav.about')}</a></li>
+            <li><a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); setIsMenuOpen(false); }} className={activeSection === 'skills' ? 'active' : ''}>{t('nav.skills')}</a></li>
+            <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); setIsMenuOpen(false); }} className={activeSection === 'projects' ? 'active' : ''}>{t('nav.projects')}</a></li>
+            <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); setIsMenuOpen(false); }} className={activeSection === 'contact' ? 'active' : ''}>{t('nav.contact')}</a></li>
           </ul>
           <div>
             <select

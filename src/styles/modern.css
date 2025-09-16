@@ -164,6 +164,30 @@
   transition: all 0.3s ease;
 }
 
+/* Mobile menu styles */
+.nav-links.nav-open {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  padding: 1rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  z-index: 1000;
+}
+
+.nav-links.nav-open a {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.nav-links.nav-open a:last-child {
+  border-bottom: none;
+}
+
 /* Hero Section */
 .modern-hero {
   min-height: 100vh;

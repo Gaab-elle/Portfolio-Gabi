@@ -1,10 +1,12 @@
 import React from "react";
+import { useI18n } from "../../i18n/i18n.jsx";
 
 const About = ({ visibleSections, sectionRef }) => {
+  const { t } = useI18n();
   return (
     <section id="about" ref={sectionRef} className="modern-about">
       <div className="about-container">
-        <h2 className="section-title">Sobre Mim</h2>
+        <h2 className="section-title">{t('sections.aboutTitle')}</h2>
         <div className="about-content">
           <div className="about-text">
             <p>

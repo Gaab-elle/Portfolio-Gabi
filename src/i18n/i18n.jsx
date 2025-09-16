@@ -15,6 +15,8 @@ const translations = {
       viewProjects: "Ver Projetos",
     },
     sections: {
+      aboutTitle: "Sobre Mim",
+      skillsTitle: "Habilidades",
       projects: "Projetos",
       contactTitle: "Vamos Conversar?",
       contactSubtitle:
@@ -44,6 +46,8 @@ const translations = {
       viewProjects: "View Projects",
     },
     sections: {
+      aboutTitle: "About Me",
+      skillsTitle: "Skills",
       projects: "Projects",
       contactTitle: "Let's Talk?",
       contactSubtitle:
@@ -73,6 +77,8 @@ const translations = {
       viewProjects: "Ver Proyectos",
     },
     sections: {
+      aboutTitle: "Sobre mí",
+      skillsTitle: "Habilidades",
       projects: "Proyectos",
       contactTitle: "¿Hablamos?",
       contactSubtitle:

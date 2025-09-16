@@ -1,12 +1,14 @@
 import React from "react";
 import DynamicLucideIcon from "../common/DynamicLucideIcon";
 import { skillsData } from "../../data/skills";
+import { useI18n } from "../../i18n/i18n.jsx";
 
 const Skills = ({ visibleSections, sectionRef }) => {
+  const { t } = useI18n();
   return (
     <section id="skills" ref={sectionRef} className="modern-skills">
       <div className="skills-container">
-        <h2 className="section-title">Habilidades</h2>
+        <h2 className="section-title">{t('sections.skillsTitle')}</h2>
         <div className="skills-grid">
           {Object.entries(skillsData).map(
             ([category, skills], categoryIndex) => (

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useI18n } from '../../i18n/i18n';
 
 const ModernHero = ({ sectionRefs, scrollToSection }) => {
+  const { t } = useI18n();
+
   return (
     <section id="home" ref={(el) => (sectionRefs.current.home = el)} className="modern-hero">
       <div className="hero-content">
@@ -8,19 +11,19 @@ const ModernHero = ({ sectionRefs, scrollToSection }) => {
           <img src="/Img/Perfil.jpg" alt="Gabi Ribeiro" />
         </div>
         <h1>Gabi Ribeiro</h1>
-        <p className="hero-subtitle">Full Stack Developer • Automation Specialist • Data Scientist</p>
+        <p className="hero-subtitle">{t('hero.subtitle')}</p>
         <div className="cta-buttons">
           <button 
             className="btn btn-primary"
             onClick={() => scrollToSection('contact')}
           >
-            Let's Talk
+            {t('hero.talk')}
           </button>
           <button 
             className="btn btn-secondary"
             onClick={() => scrollToSection('projects')}
           >
-            View Projects
+            {t('hero.viewProjects')}
           </button>
         </div>
       </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { projectsData } from '../../data/projects';
+import { useI18n } from '../../i18n/i18n';
 
 const Projects = ({ visibleSections, sectionRef, openModal }) => {
+    const { t } = useI18n();
     return (
         <section
             id="projects"
@@ -16,7 +18,7 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                 }}>
-                    Projetos
+                    {t('sections.projects')}
                 </h2>
 
                 <div className="projects-grid">

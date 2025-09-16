@@ -9,6 +9,10 @@ const Skills = ({ visibleSections, sectionRef }) => {
     <section id="skills" ref={sectionRef} className="modern-skills">
       <div className="skills-container">
         <h2 className="section-title">{t('sections.skillsTitle')}</h2>
+        {/* Debug info */}
+        <div style={{color: 'white', fontSize: '12px', marginBottom: '10px'}}>
+          DEBUG: visibleSections.has("skills") = {visibleSections.has("skills") ? 'true' : 'false'}
+        </div>
         <div className="skills-grid">
           {Object.entries(skillsData).map(
             ([category, skills], categoryIndex) => (
@@ -17,7 +21,7 @@ const Skills = ({ visibleSections, sectionRef }) => {
                 className={`skill-category ${
                   visibleSections.has("skills")
                     ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
+                    : "opacity-100 translate-y-0"
                 }`}
                 style={{
                   transitionDelay: `${categoryIndex * 200}ms`,
@@ -41,7 +45,7 @@ const Skills = ({ visibleSections, sectionRef }) => {
                           style={{
                             width: visibleSections.has("skills")
                               ? `${skill.level}%`
-                              : "0%",
+                              : `${skill.level}%`,
                           }}
                         ></div>
                       </div>

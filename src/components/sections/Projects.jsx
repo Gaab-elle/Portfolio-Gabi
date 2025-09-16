@@ -11,17 +11,16 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
         <section
             id="projects"
             ref={sectionRef}
-            className="py-20 px-4"
+            className="modern-projects"
         >
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{
-                    background: 'linear-gradient(45deg, #8b45ff, #39ff14)',
-                    backgroundClip: 'text',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent'
-                }}>
-                    {t('sections.projects')}
+            <div className="projects-container">
+                <h2 className="section-title">
+                    {t('sections.projectsTitle')}
                 </h2>
+                {/* Debug info */}
+                <div style={{color: 'white', fontSize: '12px', marginBottom: '10px'}}>
+                    DEBUG: visibleSections.has("projects") = {visibleSections.has("projects") ? 'true' : 'false'}
+                </div>
 
                 <div className="projects-grid">
                     {projectsData.map((project, index) => {

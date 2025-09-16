@@ -892,15 +892,20 @@
     min-height: 200px;
   }
   
-  /* Debug styles - remove after fixing */
+  /* Mobile-specific styles */
   .modern-skills {
-    background: rgba(255, 0, 0, 0.1) !important;
-    border: 2px solid red !important;
+    background: rgba(30, 41, 59, 0.8) !important;
   }
   
   .modern-projects {
-    background: rgba(0, 255, 0, 0.1) !important;
-    border: 2px solid green !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+  }
+  
+  /* Force content visibility */
+  .skill-category,
+  .project-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
   }
 }
 

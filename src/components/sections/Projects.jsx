@@ -1,10 +1,11 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { projectsData } from '../../data/projects';
+import { projectTranslations } from '../../data/projects.i18n.js';
 import { useI18n } from '../../i18n/i18n.jsx';
 
 const Projects = ({ visibleSections, sectionRef, openModal }) => {
-    const { t } = useI18n();
+    const { t, lang } = useI18n();
     return (
         <section
             id="projects"
@@ -22,7 +23,13 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                 </h2>
 
                 <div className="projects-grid">
-                    {projectsData.map((project, index) => (
+                    {projectsData.map((project, index) => {
+                        const i18n = (projectTranslations[lang] && projectTranslations[lang].items[project.id]) || {};
+                        const statusMap = (projectTranslations[lang] && projectTranslations[lang].status) || {};
+                        const statusLabel = statusMap[project.status] || project.status;
+                        const title = i18n.title || project.title;
+                        const description = i18n.description || project.description;
+                        return (
                         <div
                             key={project.id}
                             onClick={() => openModal(project)}
@@ -36,20 +43,20 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                             <div className="project-image">
                                 <img
                                     src={project.image}
-                                    alt={project.title}
+                                    alt={title}
                                 />
                                 <div className="project-overlay">
                                     <span className={`project-status ${
-                                        project.status === 'Concluído' ? 'status-completed' : 'status-development'
+                                        statusLabel === (statusMap['Concluído'] || 'Concluído') ? 'status-completed' : 'status-development'
                                     }`}>
-                                        {project.status}
+                                        {statusLabel}
                                     </span>
                                 </div>
                             </div>
                             <div className="project-content">
-                                <h3 className="project-title">{project.title}</h3>
+                                <h3 className="project-title">{title}</h3>
                                 <p className="project-description">
-                                    {project.description}
+                                    {description}
                                 </p>
                                 <div className="project-tech">
                                     {project.technologies.slice(0, 4).map((tech) => (
@@ -77,7 +84,7 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    );})}
                 </div>
             </div>
         </section>

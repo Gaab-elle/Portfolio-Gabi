@@ -197,6 +197,7 @@
   padding: 0 2rem;
   text-align: center;
   position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -291,6 +292,8 @@
   padding: 4rem 2rem;
   background: rgba(30, 41, 59, 0.5);
   backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
 }
 
 .stats-container {
@@ -332,6 +335,8 @@
   padding: 6rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .about-container {
@@ -493,6 +498,8 @@
 .modern-skills {
   padding: 6rem 2rem;
   background: rgba(30, 41, 59, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .skills-container {
@@ -560,6 +567,8 @@
 /* Projects Section */
 .modern-projects {
   padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .projects-container {
@@ -692,6 +701,8 @@
   padding: 6rem 2rem;
   background: rgba(30, 41, 59, 0.5);
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-content {
@@ -813,6 +824,46 @@
   
   .stats-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Ensure sections are visible on mobile */
+  .modern-skills,
+  .modern-projects {
+    padding: 4rem 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .skills-container,
+  .projects-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Fix potential overflow issues */
+  .modern-main {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all sections are visible */
+  .modern-about,
+  .modern-skills,
+  .modern-projects,
+  .modern-contact {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Fix potential height issues */
+  .modern-skills,
+  .modern-projects {
+    min-height: auto;
+  }
+  
+  /* Ensure content is visible */
+  .skills-container,
+  .projects-container {
+    min-height: 200px;
   }
 }
 

@@ -7,5 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Portfolio-Gabi/',
+  base: process.env.NODE_ENV === 'production' && process.env.VERCEL ? '/' : '/Portfolio-Gabi/',
 })

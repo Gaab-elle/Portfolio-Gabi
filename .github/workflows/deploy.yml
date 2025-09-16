@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches: [ main ]
+# Disabled - using manual deploy with gh-pages instead
+# on:
+#   push:
+#     branches: [ main ]
 
 permissions:
   contents: read

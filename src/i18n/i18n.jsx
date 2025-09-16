@@ -11,7 +11,7 @@ const translations = {
     },
     hero: {
       subtitle: "Desenvolvedora Full Stack • Especialista em Automação • Cientista de Dados",
-      talk: "Fale Conosco",
+      talk: "Fale Comigo",
       viewProjects: "Ver Projetos",
     },
     sections: {

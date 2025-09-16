@@ -58,7 +58,32 @@ export const projectTranslations = {
       },
       'builderWebsite': {
         title: 'Institutional Website - Company',
-        description: 'Modern, responsive website for a tech company with SEO optimization and performance.'
+        description: 'Modern, responsive website for a tech company with SEO optimization and performance.',
+        longDescription: `Institutional website built with a strong focus on conversion and user experience, presenting technology services professionally and attractively.
+        
+        **Main features:**
+        • Modern and responsive design
+        • Services presentation
+        • Optimized contact form
+        • SEO optimized for local search
+        • Fast and optimized loading
+        • Social media integration
+        • Projects portfolio section
+        • Technical blog
+        
+        **Technologies used:**
+        Developed with React and TypeScript for a modern, typed interface, using Vite as the bundler for optimized performance, Tailwind CSS for responsive styling, and SEO optimizations for better search ranking.`,
+        features: [
+          'Responsive design',
+          'Services presentation',
+          'Contact form',
+          'SEO optimized',
+          'Optimized performance',
+          'Projects portfolio',
+          'Technical blog'
+        ],
+        challenges: 'Create a design that conveys trust and professionalism while optimizing for qualified lead conversion.',
+        results: '200% increase in organic traffic and significant improvement in visitor-to-lead conversion rate.'
       },
       'nerdino-mvp': {
         title: 'NERDINO MVP - Tech Job Aggregator',
@@ -82,7 +107,32 @@ export const projectTranslations = {
       },
       'companyWebsite': {
         title: 'Institutional Website - Company',
-        description: 'Modern, responsive website for a tech company with SEO and blog.'
+        description: 'Modern, responsive website for a tech company with SEO and blog.',
+        longDescription: `Institutional website focused on conversion and UX, showcasing IT services in a professional and attractive way.
+        
+        **Main features:**
+        • Responsive, modern design
+        • IT services presentation
+        • Optimized contact form
+        • Local SEO optimization
+        • Fast loading and optimization
+        • Social media integration
+        • Projects portfolio
+        • Technical blog
+        
+        **Technologies used:**
+        React + TypeScript with Vite for high performance, Tailwind CSS for responsive styling and SEO best practices.`,
+        features: [
+          'Responsive design',
+          'Services presentation',
+          'Contact form',
+          'SEO optimized',
+          'Optimized performance',
+          'Projects portfolio',
+          'Technical blog'
+        ],
+        challenges: 'Design to inspire trust/professionalism and optimize lead conversion.',
+        results: '200% increase in organic traffic and better conversion rates.'
       }
     }
   },
@@ -145,7 +195,32 @@ export const projectTranslations = {
       },
       'builderWebsite': {
         title: 'Sitio Institucional - Empresa',
-        description: 'Sitio moderno y responsivo con SEO y rendimiento optimizado.'
+        description: 'Sitio moderno y responsivo con SEO y rendimiento optimizado.',
+        longDescription: `Sitio institucional desarrollado con enfoque en conversión y experiencia del usuario, presentando servicios tecnológicos de forma profesional y atractiva.
+        
+        **Principales funcionalidades:**
+        • Diseño responsivo y moderno
+        • Presentación de servicios de TI
+        • Formulario de contacto optimizado
+        • SEO optimizado para búsqueda local
+        • Carga rápida y optimizada
+        • Integración con redes sociales
+        • Sección de portafolio de proyectos
+        • Blog técnico
+        
+        **Tecnologías utilizadas:**
+        Desarrollado con React y TypeScript para una interfaz moderna y tipada, Vite como bundler para performance optimizada, Tailwind CSS para estilos responsivos y buenas prácticas de SEO.`,
+        features: [
+          'Diseño responsivo',
+          'Presentación de servicios',
+          'Formulario de contacto',
+          'SEO optimizado',
+          'Rendimiento optimizado',
+          'Portafolio de proyectos',
+          'Blog técnico'
+        ],
+        challenges: 'Crear un diseño que transmita confianza/profesionalismo y optimizar la conversión de leads.',
+        results: 'Aumento del 200% en tráfico orgánico y mejora en la conversión.'
       },
       'nerdino-mvp': {
         title: 'NERDINO MVP - Agregador de Empleos Tech',
@@ -169,7 +244,32 @@ export const projectTranslations = {
       },
       'companyWebsite': {
         title: 'Sitio Institucional - Empresa',
-        description: 'Sitio moderno y responsivo para empresa tecnológica con SEO y blog.'
+        description: 'Sitio moderno y responsivo para empresa tecnológica con SEO y blog.',
+        longDescription: `Sitio institucional con foco en conversión y UX, presentando servicios de TI de manera profesional y atractiva.
+        
+        **Principales funcionalidades:**
+        • Diseño responsivo y moderno
+        • Presentación de servicios de TI
+        • Formulario de contacto optimizado
+        • SEO local optimizado
+        • Carga rápida y optimizada
+        • Integración con redes sociales
+        • Portafolio de proyectos
+        • Blog técnico
+        
+        **Tecnologías utilizadas:**
+        React + TypeScript con Vite para alto rendimiento, Tailwind CSS para estilos responsivos y buenas prácticas de SEO.`,
+        features: [
+          'Diseño responsivo',
+          'Presentación de servicios',
+          'Formulario de contacto',
+          'SEO optimizado',
+          'Rendimiento optimizado',
+          'Portafolio de proyectos',
+          'Blog técnico'
+        ],
+        challenges: 'Diseño que transmita confianza/profesionalismo y optimización de conversión.',
+        results: 'Aumento del 200% en tráfico orgánico y mejores tasas de conversión.'
       }
     }
   }

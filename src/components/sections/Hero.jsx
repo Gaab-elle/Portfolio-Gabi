@@ -16,7 +16,7 @@ const Hero = ({ scrollToSection }) => {
         <div className="w-40 h-40 mx-auto mb-8 relative">
           <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 to-green-500 p-1 animate-pulse">
             <img
-              src="/Img/Perfil.jpg"
+              src="/Img/foto.png"
               alt="Gabi Ribeiro"
               className="w-full h-full rounded-full object-cover"
             />

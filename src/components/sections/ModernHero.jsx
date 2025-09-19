@@ -8,7 +8,7 @@ const ModernHero = ({ sectionRefs, scrollToSection }) => {
     <section id="home" ref={(el) => (sectionRefs.current.home = el)} className="modern-hero">
       <div className="hero-content">
         <div className="hero-image">
-          <img src="/Img/Perfil.jpg" alt="Gabi Ribeiro" />
+          <img src="/Img/foto.png" alt="Gabi Ribeiro" />
         </div>
         <h1>Gabi Ribeiro</h1>
         <p className="hero-subtitle">{t('hero.subtitle')}</p>

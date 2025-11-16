@@ -4,10 +4,12 @@ import { useI18n } from "../../i18n/i18n.jsx";
 const Contact = ({ visibleSections, sectionRef }) => {
   const { t } = useI18n();
   return (
-    <section id="contact" ref={sectionRef} className="modern-contact">
+    <section id="contact" ref={sectionRef} className="modern-contact portfolio-contact">
       <div className="contact-content">
-        <h2 className="section-title">{t('sections.contactTitle')}</h2>
-        <p>{t('sections.contactSubtitle')}</p>
+        <h2 className="section-subtitle">{t('contact.title')}</h2>
+        <h3 className="section-title-large">{t('contact.subtitle')}</h3>
+        <p className="contact-subtitle-large">{t('contact.subtitleLarge')}</p>
+        <p className="contact-description">{t('contact.description')}</p>
         <div className="contact-links">
           <a href="mailto:contato.gabriellerib@gmail.com" className="contact-link">
             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" alt="Email" className="contact-icon" />

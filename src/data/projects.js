@@ -216,6 +216,51 @@ export const projectsData = [
     challenges: "Integrar múltiplas APIs de plataformas de vagas, criar um sistema de IA que compreenda nuances do mercado de trabalho e implementar filtros inteligentes que evitem spam de notificações.",
     results: "Automação de 95% do processo de busca de vagas e aumento de 300% na eficiência na identificação de oportunidades relevantes."
   },
+  {
+    id: "tonoazul-finance",
+    title: "TôNoAzul - Controle Financeiro Pessoal",
+    image: "/Img/Dashboard.png",
+    description:
+      "Sistema completo de controle financeiro pessoal desenvolvido para auxiliar usuários a organizar receitas, despesas, metas e objetivos financeiros de forma simples, visual e segura.",
+    longDescription: `
+      O TôNoAzul é um sistema completo de controle financeiro pessoal que ajuda usuários a tomarem decisões mais conscientes sobre seu dinheiro, oferecendo uma visão clara e detalhada das finanças do dia a dia.
+      
+      **Principais funcionalidades:**
+      • Cadastro de receitas e despesas categorizadas
+      • Controle de contas, cartões e carteiras
+      • Dashboard com gráficos e indicadores em tempo real
+      • Definição de metas e objetivos financeiros
+      • Acompanhamento de saldo por período
+      • Relatórios detalhados por categoria, mês e tipo de gasto
+      • Sistema de tags para organização avançada
+      
+      **Tecnologias utilizadas:**
+      Backend desenvolvido em Laravel para uma API robusta e segura, com autenticação e autorização, e frontend em Vue.js para uma interface rápida, responsiva e intuitiva, utilizando componentes dinâmicos e integração em tempo real com a API.
+    `,
+    technologies: [
+      "Laravel",
+      "PHP",
+      "Vue.js",
+      "MySQL",
+      "Tailwind CSS",
+      "REST API",
+      "JWT"
+    ],
+    category: "Full Stack",
+    demoLink: null,
+    codeLink: null,
+    status: "Concluído",
+    features: [
+      "Controle de receitas e despesas",
+      "Dashboard financeiro em tempo real",
+      "Metas e objetivos financeiros",
+      "Relatórios por categoria e período",
+      "Gestão de contas e cartões",
+      "Interface responsiva e intuitiva"
+    ],
+    challenges: "Criar uma experiência simples para usuários não técnicos, garantindo ao mesmo tempo segurança no armazenamento dos dados financeiros e flexibilidade na categorização de transações.",
+    results: "Ajuda usuários a terem maior clareza sobre seus hábitos financeiros, contribuindo para redução de dívidas e melhor planejamento de metas de médio e longo prazo."
+  },
   
   // PROJETOS EM DESENVOLVIMENTO (aparecem depois)
   {

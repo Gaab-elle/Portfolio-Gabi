@@ -4,10 +4,11 @@ import { useIntersectionObserver } from "./hooks/useIntersectionObserver";
 
 // Importar componentes das seções
 import ModernHero from "./components/sections/ModernHero";
-import Stats from "./components/sections/Stats";
-import About from "./components/sections/About";
-import Skills from "./components/sections/Skills";
+import Services from "./components/sections/Services";
 import Projects from "./components/sections/Projects";
+import AboutMe from "./components/sections/AboutMe";
+// import Testimonials from "./components/sections/Testimonials"; // Temporarily disabled
+import FAQ from "./components/sections/FAQ";
 import Contact from "./components/sections/Contact";
 
 // Importar modais
@@ -89,8 +90,7 @@ const PortfolioGabiModern = () => {
           <div className="logo">Gabi Ribeiro</div>
           <ul className={`nav-links ${isMenuOpen ? 'nav-open' : ''}`}>
             <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); setIsMenuOpen(false); }} className={activeSection === 'home' ? 'active' : ''}>{t('nav.home')}</a></li>
-            <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); setIsMenuOpen(false); }} className={activeSection === 'about' ? 'active' : ''}>{t('nav.about')}</a></li>
-            <li><a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); setIsMenuOpen(false); }} className={activeSection === 'skills' ? 'active' : ''}>{t('nav.skills')}</a></li>
+            <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); setIsMenuOpen(false); }} className={activeSection === 'services' ? 'active' : ''}>Serviços</a></li>
             <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); setIsMenuOpen(false); }} className={activeSection === 'projects' ? 'active' : ''}>{t('nav.projects')}</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); setIsMenuOpen(false); }} className={activeSection === 'contact' ? 'active' : ''}>{t('nav.contact')}</a></li>
           </ul>
@@ -99,7 +99,7 @@ const PortfolioGabiModern = () => {
               aria-label={t('langLabel')}
               value={lang}
               onChange={(e) => setLang(e.target.value)}
-              className="bg-transparent border border-purple-500/40 rounded-md px-2 py-1 text-sm text-gray-200"
+              className="lang-select"
             >
               <option value="pt">PT</option>
               <option value="en">EN</option>
@@ -122,14 +122,8 @@ const PortfolioGabiModern = () => {
         {/* Hero Section */}
         <ModernHero sectionRefs={sectionRefs} scrollToSection={scrollToSection} />
 
-        {/* Stats Section */}
-        <Stats />
-
-        {/* About Section */}
-        <About visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current.about = el)} />
-
-        {/* Skills Section */}
-        <Skills visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current.skills = el)} />
+        {/* Services Section */}
+        <Services visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current.services = el)} />
 
         {/* Projects Section */}
         <Projects
@@ -138,6 +132,15 @@ const PortfolioGabiModern = () => {
           openModal={openModal}
         />
 
+        {/* About Me Section */}
+        <AboutMe visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current['about-me'] = el)} />
+
+        {/* Testimonials Section - Temporarily disabled */}
+        {/* <Testimonials visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current.testimonials = el)} /> */}
+
+        {/* FAQ Section */}
+        <FAQ visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current.faq = el)} />
+
         {/* Contact Section */}
         <Contact visibleSections={visibleSections} sectionRef={(el) => (sectionRefs.current.contact = el)} />
       </main>
@@ -145,7 +148,35 @@ const PortfolioGabiModern = () => {
       {/* Footer */}
       <footer className="modern-footer">
         <div className="footer-content">
-          <p>{t('footer.copyright')}</p>
+          <div className="footer-top">
+            <p className="footer-address">{t('footer.address')}</p>
+          </div>
+          <div className="footer-grid">
+            <div className="footer-column">
+              <h4 className="footer-title">{t('footer.aboutTitle')}</h4>
+              <ul className="footer-links">
+                <li><a href="#contact" className="footer-link" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>{t('footer.contact')}</a></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4 className="footer-title">{t('footer.servicesTitle')}</h4>
+              <ul className="footer-links">
+                <li><a href="#services" className="footer-link" onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}>{t('footer.services')}</a></li>
+                <li><a href="#projects" className="footer-link" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>{t('footer.projects')}</a></li>
+                <li><a href="https://instagram.com" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              </ul>
+            </div>
+            <div className="footer-column">
+              <h4 className="footer-title">{t('footer.moreTitle')}</h4>
+              <ul className="footer-links">
+                <li><a href="#projects" className="footer-link" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>{t('footer.projects')}</a></li>
+                <li><a href="https://twitter.com" className="footer-link" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p className="footer-copyright">{t('footer.copyright')}</p>
+          </div>
         </div>
       </footer>
 

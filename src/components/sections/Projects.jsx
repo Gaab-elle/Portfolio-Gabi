@@ -1,5 +1,5 @@
-import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import React, { useRef, useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { projectsData } from '../../data/projects';
 import { projectTranslations } from '../../data/projects.i18n.js';
 import { useI18n } from '../../i18n/i18n.jsx';
@@ -7,6 +7,42 @@ import { useI18n } from '../../i18n/i18n.jsx';
 const Projects = ({ visibleSections, sectionRef, openModal }) => {
     const { t, lang } = useI18n();
     const langKey = (typeof lang === 'string' ? lang.toLowerCase() : lang) || 'pt';
+    const scrollContainerRef = useRef(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+
+    const checkScrollButtons = () => {
+        if (scrollContainerRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+            setCanScrollLeft(scrollLeft > 0);
+            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+        }
+    };
+
+    useEffect(() => {
+        checkScrollButtons();
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', checkScrollButtons);
+            window.addEventListener('resize', checkScrollButtons);
+            return () => {
+                container.removeEventListener('scroll', checkScrollButtons);
+                window.removeEventListener('resize', checkScrollButtons);
+            };
+        }
+    }, []);
+
+    const scroll = (direction) => {
+        if (scrollContainerRef.current) {
+            const scrollAmount = 400;
+            const newScrollLeft = scrollContainerRef.current.scrollLeft + (direction === 'left' ? -scrollAmount : scrollAmount);
+            scrollContainerRef.current.scrollTo({
+                left: newScrollLeft,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <section
             id="projects"
@@ -14,12 +50,17 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
             className="modern-projects"
         >
             <div className="projects-container">
-                <h2 className="section-title">
-                    {t('sections.projectsTitle')}
-                </h2>
+                <h2 className="section-subtitle">{t('projects.title')}</h2>
+                <h3 className="section-title-large">
+                    {t('projects.subtitle')}
+                </h3>
 
-                <div className="projects-grid">
-                    {projectsData.map((project, index) => {
+                <div className="projects-carousel-wrapper">
+                    <div 
+                        className="projects-carousel"
+                        ref={scrollContainerRef}
+                    >
+                        {projectsData.map((project, index) => {
                         const i18n = (projectTranslations[langKey] && projectTranslations[langKey].items[project.id]) || {};
                         const statusMap = (projectTranslations[langKey] && projectTranslations[langKey].status) || {};
                         const statusLabel = statusMap[project.status] || project.status;
@@ -28,7 +69,6 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                         return (
                         <div
                             key={project.id}
-                            onClick={() => openModal(project)}
                             className={`project-card ${
                                 visibleSections.has('projects')
                                     ? 'opacity-100 translate-y-0'
@@ -41,46 +81,48 @@ const Projects = ({ visibleSections, sectionRef, openModal }) => {
                                     src={project.image}
                                     alt={title}
                                 />
-                                <div className="project-overlay">
-                                    <span className={`project-status ${
-                                        statusLabel === (statusMap['Concluído'] || 'Concluído') ? 'status-completed' : 'status-development'
-                                    }`}>
-                                        {statusLabel}
-                                    </span>
-                                </div>
                             </div>
                             <div className="project-content">
+                                <div className="project-category">{i18n.category || project.category || 'PROJETO'}</div>
                                 <h3 className="project-title">{title}</h3>
-                                <p className="project-description">
-                                    {description}
-                                </p>
-                                <div className="project-tech">
-                                    {project.technologies.slice(0, 4).map((tech) => (
-                                        <span key={tech} className="tech-tag">
-                                            {tech}
-                                        </span>
-                                    ))}
-                                    {project.technologies.length > 4 && (
-                                        <span className="tech-tag tech-more">
-                                            +{project.technologies.length - 4}
-                                        </span>
-                                    )}
-                                </div>
                                 <div className="project-links">
-                                    {project.demoLink && project.demoLink !== '#' && (
-                                        <a href={project.demoLink} className="project-link" target="_blank" rel="noopener noreferrer">
-                                            Live Demo
-                                        </a>
-                                    )}
-                                    {project.codeLink && project.codeLink !== '#' && (
-                                        <a href={project.codeLink} className="project-link" target="_blank" rel="noopener noreferrer">
-                                            GitHub
-                                        </a>
-                                    )}
+                                    <a 
+                                        href={project.demoLink || project.codeLink || '#'} 
+                                        className="project-link" 
+                                        onClick={(e) => {
+                                            if (!project.demoLink && !project.codeLink) {
+                                                e.preventDefault();
+                                                openModal(project);
+                                            }
+                                        }}
+                                        target={project.demoLink || project.codeLink ? "_blank" : undefined}
+                                        rel={project.demoLink || project.codeLink ? "noopener noreferrer" : undefined}
+                                    >
+                                        {t('projects.viewProject')} →
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     );})}
+                    </div>
+                    <div className="carousel-nav">
+                        <button 
+                            className={`carousel-btn ${!canScrollLeft ? 'disabled' : ''}`}
+                            onClick={() => scroll('left')}
+                            disabled={!canScrollLeft}
+                            aria-label="Projetos anteriores"
+                        >
+                            <ChevronLeft size={24} />
+                        </button>
+                        <button 
+                            className={`carousel-btn ${!canScrollRight ? 'disabled' : ''}`}
+                            onClick={() => scroll('right')}
+                            disabled={!canScrollRight}
+                            aria-label="Próximos projetos"
+                        >
+                            <ChevronRight size={24} />
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

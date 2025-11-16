@@ -17,7 +17,7 @@ export const useIntersectionObserver = (setVisibleSections, setActiveSection) =>
             { threshold: 0.3, rootMargin: '-50px' }
         );
 
-        ['home', 'about', 'skills', 'projects', 'blog', 'contact'].forEach(id => {
+        ['home', 'services', 'projects', 'about-me', 'faq', 'contact'].forEach(id => {
             const ref = sectionRefs.current[id];
             if (ref) observerRef.current.observe(ref);
         });

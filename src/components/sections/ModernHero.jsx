@@ -24,13 +24,18 @@ const ModernHero = ({ sectionRefs, scrollToSection }) => {
               {t('hero.bookCall')}
               <ArrowRight size={20} />
             </button>
-            <button 
+            <a
+              href={`${import.meta.env.BASE_URL}Pdf/Dev.FullStack-Gabrielle.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-download-cv"
-              onClick={() => scrollToSection('about-me')}
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
             >
               {t('hero.viewCV')}
               <Download size={20} />
-            </button>
+            </a>
           </div>
         </div>
         <div className="hero-right">

@@ -90,7 +90,7 @@ const PortfolioGabiModern = () => {
           <div className="logo">Gabi Ribeiro</div>
           <ul className={`nav-links ${isMenuOpen ? 'nav-open' : ''}`}>
             <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); setIsMenuOpen(false); }} className={activeSection === 'home' ? 'active' : ''}>{t('nav.home')}</a></li>
-            <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); setIsMenuOpen(false); }} className={activeSection === 'services' ? 'active' : ''}>Serviços</a></li>
+            <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services'); setIsMenuOpen(false); }} className={activeSection === 'services' ? 'active' : ''}>{t('nav.services')}</a></li>
             <li><a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); setIsMenuOpen(false); }} className={activeSection === 'projects' ? 'active' : ''}>{t('nav.projects')}</a></li>
             <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); setIsMenuOpen(false); }} className={activeSection === 'contact' ? 'active' : ''}>{t('nav.contact')}</a></li>
           </ul>
